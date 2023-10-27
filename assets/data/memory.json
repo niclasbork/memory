@@ -4,7 +4,7 @@
         "class":        "card card--01",
         "back": {
             "class":        "back-side",
-            "src":     "./assets/img/smiley-cover.png"
+            "src":     "./public/smiley-cover.png"
         },
         "front": {
             "class":        "front-side",
@@ -16,7 +16,7 @@
         "class":        "card card--02",
         "back": {
             "class":        "back-side",
-            "src":     "./assets/img/smiley-cover.png"
+            "src":     "./public/smiley-cover.png"
         },
         "front": {
             "class":        "front-side",
@@ -28,7 +28,7 @@
         "class":        "card card--03",
         "back": {
             "class":        "back-side",
-            "src":     "./assets/img/smiley-cover.png"
+            "src":     "./public/smiley-cover.png"
         },
         "front": {
             "class":        "front-side",
@@ -40,7 +40,7 @@
         "class":        "card card--04",
         "back": {
             "class":        "back-side",
-            "src":     "./assets/img/smiley-cover.png"
+            "src":     "./public/smiley-cover.png"
         },
         "front": {
             "class":        "front-side",
@@ -52,7 +52,7 @@
         "class":        "card card--05",
         "back": {
             "class":        "back-side",
-            "src":     "./assets/img/smiley-cover.png"
+            "src":     "./public/smiley-cover.png"
         },
         "front": {
             "class":        "front-side",
@@ -64,7 +64,7 @@
         "class":        "card card--06",
         "back": {
             "class":        "back-side",
-            "src":     "./assets/img/smiley-cover.png"
+            "src":     "./public/smiley-cover.png"
         },
         "front": {
             "class":        "front-side",
