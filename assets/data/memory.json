@@ -1,62 +1,74 @@
 [
     {
         "name":         "01",
-        "class":        "front-side back-side",
-        "color":        "#D14D41"
+        "class":        "card card--01",
+        "back": {
+            "class":        "back-side",
+            "src":     "./assets/img/smiley-cover.png"
+        },
+        "front": {
+            "class":        "front-side",
+            "src":     "./assets/img/smiley-1.png"
+        }
     },
     {
         "name":         "02",
-        "class":        "front-side back-side",
-        "color":        "#DA702C"
+        "class":        "card card--02",
+        "back": {
+            "class":        "back-side",
+            "src":     "./assets/img/smiley-cover.png"
+        },
+        "front": {
+            "class":        "front-side",
+            "src":     "./assets/img/smiley-2.png"
+        }
     },
     {
         "name":         "03",
-        "class":        "front-side back-side",
-        "color":        "#D0A215"
+        "class":        "card card--03",
+        "back": {
+            "class":        "back-side",
+            "src":     "./assets/img/smiley-cover.png"
+        },
+        "front": {
+            "class":        "front-side",
+            "src":     "./assets/img/smiley-3.png"
+        }
     },
     {
         "name":         "04",
-        "class":        "front-side back-side",
-        "color":        "#879A39"
+        "class":        "card card--04",
+        "back": {
+            "class":        "back-side",
+            "src":     "./assets/img/smiley-cover.png"
+        },
+        "front": {
+            "class":        "front-side",
+            "src":     "./assets/img/smiley-4.png"
+        }
     },
     {
         "name":         "05",
-        "class":        "front-side back-side",
-        "color":        "#3AA99F"
+        "class":        "card card--05",
+        "back": {
+            "class":        "back-side",
+            "src":     "./assets/img/smiley-cover.png"
+        },
+        "front": {
+            "class":        "front-side",
+            "src":     "./assets/img/smiley-5.png"
+        }
     },
     {
         "name":         "06",
-        "class":        "front-side back-side",
-        "color":        "#4385BE"
-    },
-    {
-        "name":         "07",
-        "class":        "front-side back-side",
-        "color":        "#8B7EC8"
-    },
-    {
-        "name":         "08",
-        "class":        "front-side back-side",
-        "color":        "#CE5D97"
-    },
-    {
-        "name":         "09",
-        "class":        "front-side back-side",
-        "color":        "#164078"   
-    },
-    {
-        "name":         "10",
-        "class":        "front-side back-side",
-        "color":        "#A02F6F"   
-    },
-    {
-        "name":         "11",
-        "class":        "front-side back-side",
-        "color":        "#205EA6"
-    },
-    {
-        "name":         "12",
-        "class":        "front-side back-side",
-        "color":        "#24837B"
+        "class":        "card card--06",
+        "back": {
+            "class":        "back-side",
+            "src":     "./assets/img/smiley-cover.png"
+        },
+        "front": {
+            "class":        "front-side",
+            "src":     "./assets/img/smiley-6.png"
+        }
     }
 ]

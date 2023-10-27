@@ -36,23 +36,26 @@ body {
       flex-wrap: wrap;
       max-width: 1000px;
 
-      .card {
+      .memory-card {
+        background-color: #1F2122;
         width: calc(250px - 2px);
         height: calc(250px - 2px);
         cursor: pointer;
         margin: 1px;
+
+        &:hover {
+          filter: drop-shadow(0 0 2em #1F2122);
+        }
+
+        &.flip {
+          // transform: rotateY(180deg);
+          background-color: #fff;
+        }
+
+        > img {
+          width: 100%;
+        }
       }
-    }
-  }
-  
-  .logo {
-    height: 6em;
-    padding-bottom: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  
-    &:hover {
-      filter: drop-shadow(0 0 2em #f7df1eaa);
     }
   }
 }
