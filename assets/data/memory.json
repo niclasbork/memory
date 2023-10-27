@@ -4,11 +4,11 @@
         "class":        "card card--01",
         "back": {
             "class":        "back-side",
-            "src":     "./public/smiley-cover.png"
+            "src":     "smiley-cover.png"
         },
         "front": {
             "class":        "front-side",
-            "src":     "./assets/img/smiley-1.png"
+            "src":     "smiley-1.png"
         }
     },
     {
@@ -16,11 +16,11 @@
         "class":        "card card--02",
         "back": {
             "class":        "back-side",
-            "src":     "./public/smiley-cover.png"
+            "src":     "smiley-cover.png"
         },
         "front": {
             "class":        "front-side",
-            "src":     "./assets/img/smiley-2.png"
+            "src":     "smiley-2.png"
         }
     },
     {
@@ -28,11 +28,11 @@
         "class":        "card card--03",
         "back": {
             "class":        "back-side",
-            "src":     "./public/smiley-cover.png"
+            "src":     "smiley-cover.png"
         },
         "front": {
             "class":        "front-side",
-            "src":     "./assets/img/smiley-3.png"
+            "src":     "smiley-3.png"
         }
     },
     {
@@ -40,11 +40,11 @@
         "class":        "card card--04",
         "back": {
             "class":        "back-side",
-            "src":     "./public/smiley-cover.png"
+            "src":     "smiley-cover.png"
         },
         "front": {
             "class":        "front-side",
-            "src":     "./assets/img/smiley-4.png"
+            "src":     "smiley-4.png"
         }
     },
     {
@@ -52,11 +52,11 @@
         "class":        "card card--05",
         "back": {
             "class":        "back-side",
-            "src":     "./public/smiley-cover.png"
+            "src":     "smiley-cover.png"
         },
         "front": {
             "class":        "front-side",
-            "src":     "./assets/img/smiley-5.png"
+            "src":     "smiley-5.png"
         }
     },
     {
@@ -64,11 +64,11 @@
         "class":        "card card--06",
         "back": {
             "class":        "back-side",
-            "src":     "./public/smiley-cover.png"
+            "src":     "smiley-cover.png"
         },
         "front": {
             "class":        "front-side",
-            "src":     "./assets/img/smiley-6.png"
+            "src":     "smiley-6.png"
         }
     }
 ]
