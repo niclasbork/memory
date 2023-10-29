@@ -1,74 +1,74 @@
 [
     {
-        "name":         "01",
-        "class":        "card card--01",
+        "name": "01",
+        "class": "card card--01",
         "back": {
-            "class":        "back-side",
-            "src":     "smiley-cover.png"
+            "class": "back-side",
+            "src": "smiley-cover.png"
         },
         "front": {
-            "class":        "front-side",
-            "src":     "smiley-1.png"
+            "class": "front-side",
+            "src": "smiley-1.png"
         }
     },
     {
-        "name":         "02",
-        "class":        "card card--02",
+        "name": "02",
+        "class": "card card--02",
         "back": {
-            "class":        "back-side",
-            "src":     "smiley-cover.png"
+            "class": "back-side",
+            "src": "smiley-cover.png"
         },
         "front": {
-            "class":        "front-side",
-            "src":     "smiley-2.png"
+            "class": "front-side",
+            "src": "smiley-2.png"
         }
     },
     {
-        "name":         "03",
-        "class":        "card card--03",
+        "name": "03",
+        "class": "card card--03",
         "back": {
-            "class":        "back-side",
-            "src":     "smiley-cover.png"
+            "class": "back-side",
+            "src": "smiley-cover.png"
         },
         "front": {
-            "class":        "front-side",
-            "src":     "smiley-3.png"
+            "class": "front-side",
+            "src": "smiley-3.png"
         }
     },
     {
-        "name":         "04",
-        "class":        "card card--04",
+        "name": "04",
+        "class": "card card--04",
         "back": {
-            "class":        "back-side",
-            "src":     "smiley-cover.png"
+            "class": "back-side",
+            "src": "smiley-cover.png"
         },
         "front": {
-            "class":        "front-side",
-            "src":     "smiley-4.png"
+            "class": "front-side",
+            "src": "smiley-4.png"
         }
     },
     {
-        "name":         "05",
-        "class":        "card card--05",
+        "name": "05",
+        "class": "card card--05",
         "back": {
-            "class":        "back-side",
-            "src":     "smiley-cover.png"
+            "class": "back-side",
+            "src": "smiley-cover.png"
         },
         "front": {
-            "class":        "front-side",
-            "src":     "smiley-5.png"
+            "class": "front-side",
+            "src": "smiley-5.png"
         }
     },
     {
-        "name":         "06",
-        "class":        "card card--06",
+        "name": "06",
+        "class": "card card--06",
         "back": {
-            "class":        "back-side",
-            "src":     "smiley-cover.png"
+            "class": "back-side",
+            "src": "smiley-cover.png"
         },
         "front": {
-            "class":        "front-side",
-            "src":     "smiley-6.png"
+            "class": "front-side",
+            "src": "smiley-6.png"
         }
     }
 ]

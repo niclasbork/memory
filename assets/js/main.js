@@ -7,6 +7,7 @@ console.log(data);
 
 const memoryWrapper = document.querySelector(".memory-wrapper");
 const startGame = document.querySelector(".start-game");
+const newGame = document.querySelector(".new-game");
 let memoryCard;
 
 const init = function() {
@@ -41,9 +42,6 @@ const flipCard = function() {
     for(let j = 0; j < memoryCard.length; j++) {
         memoryCard[j].addEventListener("click", function() {
             memoryCard[j].classList.add("flip");
-            console.log("Flip");
-            console.log("data-name", memoryCard[j].dataset.name);
-            console.log("has class", memoryCard[j].classList.contains("flip"));
             checkMatch(memoryCard[j]);
         });
     }
@@ -52,12 +50,13 @@ const flipCard = function() {
 // function checkMatch();
 const checkMatch = function(element) {
     console.log(element);
+    console.log("data-name", element.dataset.name);
+    console.log("has class", element.classList.contains("flip"));
     if(element.dataset.name.length && element.classList.contains("flip").length) {
         console.log("It's a match!");
     } else {
         console.log("Oh no!");
     }
-    return element;
 };
 
 // function unflipCards();
@@ -67,4 +66,9 @@ const checkMatch = function(element) {
 startGame.addEventListener("click", function() {
     init();
     startGame.style.display = "none";
+    newGame.style.display = "block";
+});
+
+newGame.addEventListener("click", function() {
+    shuffleCards();
 });

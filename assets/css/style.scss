@@ -26,20 +26,22 @@ body {
     margin: 0 auto;
     padding: 2rem;
   
-    .quote {
-      max-width: 400px;
+    .new-game {
+      display: none;
+      margin: 50px auto;
     }
 
     .memory-wrapper {
       display: flex;
+      justify-content: center;
       flex-direction: row;
       flex-wrap: wrap;
       max-width: 1000px;
 
       .memory-card {
         background-color: #1F2122;
-        width: calc(250px - 2px);
-        height: calc(250px - 2px);
+        width: calc(245px - 2px);
+        height: calc(245px - 2px);
         cursor: pointer;
         margin: 1px;
 
