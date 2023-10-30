@@ -41,8 +41,8 @@ const flipCard = function() {
     memoryCard = document.querySelectorAll(".memory-card");
     for(let j = 0; j < memoryCard.length; j++) {
         memoryCard[j].addEventListener("click", function() {
-            memoryCard[j].classList.add("flip");
-            checkMatch(memoryCard[j]);
+            this.classList.add("flip");
+            checkMatch(this);
         });
     }
 };
@@ -52,10 +52,10 @@ const checkMatch = function(element) {
     console.log(element);
     console.log("data-name", element.dataset.name);
     console.log("has class", element.classList.contains("flip"));
-    if(element.dataset.name.length && element.classList.contains("flip").length) {
+    if(element.classList.contains("flip").length && element.dataset.name.length ) {
         console.log("It's a match!");
     } else {
-        console.log("Oh no!");
+        console.log("No match!");
     }
 };
 
