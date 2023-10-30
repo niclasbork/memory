@@ -68,7 +68,7 @@ const checkForPairsIfTwoCardsAreOpen = function() {
                 secondCard.classList.remove("is-open");
                 openCards.length = 0; // Reset the open cards
                 console.log("No match!");
-            }, 750); // Delay before flipping unmatched cards back
+            }, 1000); // Delay before flipping unmatched cards back
         }
     }
 };
