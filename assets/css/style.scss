@@ -31,7 +31,7 @@ body {
       margin: 50px auto;
     }
 
-    .memory-wrapper {
+    .memory-game {
       display: flex;
       justify-content: center;
       flex-direction: row;
@@ -39,23 +39,33 @@ body {
       max-width: 1000px;
 
       .memory-card {
+        position: relative;
         background-color: #1F2122;
         width: calc(245px - 2px);
         height: calc(245px - 2px);
         cursor: pointer;
         margin: 1px;
+        transform-style: preserve-3d;
+        transition: transform .5s;
+        transform: rotateY(180deg);
 
-        &:hover {
-          filter: drop-shadow(0 0 2em #1F2122);
-        }
+        &.is-open {
+          transform: rotateY(0);
 
-        &.flip {
-          // transform: rotateY(180deg);
-          background-color: #fff;
+          img {
+            &.back-side {
+              z-index: -1;
+            }
+          }
         }
 
         > img {
           width: 100%;
+          position: absolute;
+
+          &.front-side {
+            backface-visibility: hidden;
+          }
         }
       }
     }
