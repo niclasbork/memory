@@ -43,20 +43,25 @@ const openCards = [];
 
 const flipCard = function() {
     memoryCard = document.querySelectorAll(".memory-card");
+    let isFlipping = false;
+
     for (let j = 0; j < memoryCard.length; j++) {
         memoryCard[j].addEventListener("click", function() {
-            if (!this.classList.contains("is-open")) {
+            if (!this.classList.contains("is-open") && !isFlipping) {
                 this.classList.add("is-open");
                 openCards.push(this);
                 if (openCards.length === 2) {
-                    checkForPairsIfTwoCardsAreOpen();
+                    isFlipping = true;
+                    checkForPairsIfTwoCardsAreOpen(() => {
+                        isFlipping = false; // Re-enable card interactions after the flip animation
+                    });
                 }
             }
         });
     }
 };
 
-const checkForPairsIfTwoCardsAreOpen = function() {
+const checkForPairsIfTwoCardsAreOpen = function(callback) {
     if (openCards.length === 2) {
         let [firstCard, secondCard] = openCards;
         if (firstCard.getAttribute("data-name") === secondCard.getAttribute("data-name")) {
@@ -68,16 +73,25 @@ const checkForPairsIfTwoCardsAreOpen = function() {
                 secondCard.classList.remove("is-open");
                 openCards.length = 0; // Reset the open cards
                 console.log("No match!");
-            }, 1000); // Delay before flipping unmatched cards back
+            }, 1000);
+        }
+        setTimeout(callback, 1000); // Call the callback to re-enable card interactions after 1 second
+    }
+};
+
+const checkForWin = function(el) {
+    // console.log("check", el);
+    for(let i = 0; el.length; i++) {
+        if(el.classList.contains("is-open")) {
+            console.log("HIT");
         }
     }
 };
 
-const resetCards = function() {
-    let memoryCard = document.querySelectorAll(".memory-card");
-    for(let i = 0; i < memoryCard.length; i++) {
+const resetCards = function(element) {
+    for(let i = 0; i < element.length; i++) {
         console.log("Reset!");
-        memoryCard[i].classList.remove("is-open");
+        element[i].classList.remove("is-open");
     }
 };
 
@@ -90,5 +104,5 @@ startGame.addEventListener("click", function() {
 
 newGame.addEventListener("click", function() {
     shuffleCards();
-    resetCards();
+    resetCards(memoryCard);
 });

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500&display=swap');
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -20,6 +22,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  user-select: none;
+  font-family: 'Playpen Sans', cursive;
 
   #app {
     max-width: 1280px;
@@ -48,6 +52,9 @@ body {
         transform-style: preserve-3d;
         transition: transform .5s;
         transform: rotateY(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &.is-open {
           transform: rotateY(0);
@@ -60,13 +67,29 @@ body {
         }
 
         > img {
-          width: 100%;
+          width: 60%;
           position: absolute;
+          
 
           &.front-side {
             backface-visibility: hidden;
           }
         }
+      }
+    }
+
+    button {
+      cursor: pointer;
+      font-size: 20px;
+      background-color: rgba(31, 33, 34, 1);
+      border: none;
+      border-radius: 30px;
+      color: #fff;
+      padding: 15px 50px;
+      font-family: 'Playpen Sans', cursive;
+
+      &:hover {
+        background-color: rgba(31, 33, 34, .8);
       }
     }
   }
