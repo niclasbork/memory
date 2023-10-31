@@ -20,6 +20,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
   user-select: none;
@@ -27,12 +28,25 @@ body {
 
   #app {
     max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-  
-    .new-game {
-      display: none;
-      margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+
+    form {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+
+      > input {
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        padding: 15px 50px;
+        font-size: 20px;
+        font-family: 'Playpen Sans', cursive;
+        outline: none;
+        text-align: center;
+      }
     }
 
     .memory-game {
@@ -76,6 +90,11 @@ body {
           }
         }
       }
+    }
+
+    .new-game {
+      display: none;
+      margin: 30px auto;
     }
 
     button {

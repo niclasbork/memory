@@ -8,6 +8,8 @@ import data from '../data/memory.json';
 const memoryWrapper = document.querySelector(".memory-game");
 const startGame = document.querySelector(".start-game");
 const newGame = document.querySelector(".new-game");
+const form = document.querySelector("form");
+const input = document.querySelector("input");
 let memoryCard;
 
 const init = function() {
@@ -30,6 +32,22 @@ const init = function() {
     shuffleCards();
     flipCard();
 };
+
+// const checkName = function() {
+//     startGame.disabled = true;
+//     input.addEventListener("input", function() {
+//         let nameValue = input.value;
+//         startGame.disabled = false;
+//         startGame.addEventListener("click", function() {
+//             console.log(nameValue);
+//             let player = document.createElement("h1");
+//             player.textContent = nameValue;
+//             document.querySelector("#app").prepend("Player: ", player);
+//         });
+//     });
+// };
+
+// checkName();
 
 const shuffleCards = function() {
     console.log("Shuffle!");
@@ -79,14 +97,14 @@ const checkForPairsIfTwoCardsAreOpen = function(callback) {
     }
 };
 
-const checkForWin = function(el) {
-    // console.log("check", el);
-    for(let i = 0; el.length; i++) {
-        if(el.classList.contains("is-open")) {
-            console.log("HIT");
-        }
-    }
-};
+// const checkForWin = function(el) {
+//     // console.log("check", el);
+//     for(let i = 0; el.length; i++) {
+//         if(el.classList.contains("is-open")) {
+//             console.log("HIT");
+//         }
+//     }
+// };
 
 const resetCards = function(element) {
     for(let i = 0; i < element.length; i++) {
@@ -100,6 +118,7 @@ startGame.addEventListener("click", function() {
     init();
     startGame.style.display = "none";
     newGame.style.display = "block";
+    form.style.display = "none";
 });
 
 newGame.addEventListener("click", function() {
