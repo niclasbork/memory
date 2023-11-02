@@ -58,10 +58,10 @@ body {
 
         &::placeholder {
           color: $color-black;
-          opacity: 1; /* Firefox */
+          opacity: 1;
         }
         
-        &::-ms-input-placeholder { /* Edge 12 -18 */
+        &::-ms-input-placeholder {
           color: $color-black;
         }
       }
@@ -172,7 +172,7 @@ body {
       background-color: rgba(31, 33, 34, 1);
       border: none;
       border-radius: 30px;
-      color: #fff;
+      color: $color-white;
       padding: 15px 50px;
       font-family: $font-family;
 
