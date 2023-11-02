@@ -112,8 +112,8 @@ const resetCards = function(element) {
         console.log("Reset!");
         setTimeout(function() {
             element[i].classList.remove("is-open");
-        }, 1000);
-        setTimeout(shuffleCards, 1300);
+        }, 500);
+        setTimeout(shuffleCards, 800);
     }
 };
 
