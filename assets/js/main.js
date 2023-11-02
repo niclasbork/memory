@@ -10,6 +10,8 @@ const startGame = document.querySelector(".start-game");
 const newGame = document.querySelector(".new-game");
 const form = document.querySelector("form");
 const input = document.querySelector("input");
+const close = document.querySelector(".close");
+const infoBox = document.querySelector(".info-box");
 let memoryCard;
 
 const init = function() {
@@ -48,7 +50,10 @@ const checkName = function() {
             app.insertBefore(Name, startGame);
 
             localStorage.setItem("Name", nameValue);
-            console.log("Name:", localStorage.getItem("Name"));
+            let userName = localStorage.getItem("Name");
+            console.log("Name:", userName);
+
+            infoBox.append(userName);
         });
     });
 };
@@ -81,6 +86,7 @@ const flipCard = function() {
                     });
                 }
             }
+            checkForWin(memoryCard);
         });
     }
 };
@@ -104,7 +110,22 @@ const checkForPairsIfTwoCardsAreOpen = function(callback) {
 };
 
 const checkForWin = function() {
-    
+    const maxItems = 12;
+    const isOpen = document.querySelectorAll(".is-open");
+    for(let i = 0; i < isOpen.length; i++) {
+        if(isOpen.length == maxItems) {
+            console.log("Win!");
+            infoBox.style.display = "block";
+        }
+    };
+
+    closeInfoBox(infoBox);
+};
+
+const closeInfoBox = function(elem) {
+    close.addEventListener("click", function() {
+        elem.style.display = "none";
+    });
 };
 
 const resetCards = function(element) {
@@ -115,6 +136,10 @@ const resetCards = function(element) {
         }, 500);
         setTimeout(shuffleCards, 800);
     }
+
+    setTimeout(function() {
+        infoBox.style.display = "none";
+    }, 500);
 };
 
 startGame.addEventListener("click", function() {

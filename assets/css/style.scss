@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
 
 $font-family: 'Playfair Display', serif;
+$color-black: #1F2122;
+$color-dark-black: #000;
+$color-white: #fff;
 
 :root {
   font-family: $font-family;
@@ -8,8 +11,8 @@ $font-family: 'Playfair Display', serif;
   font-weight: 400;
 
   // color-scheme: light dark;
-  color: #213547;
-  background-color: #ffffff;
+  color: $color-black;
+  background-color: $color-white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -64,7 +67,7 @@ body {
 
       .memory-card {
         position: relative;
-        background-color: #1F2122;
+        background-color: $color-black;
         cursor: pointer;
         margin: 1px;
         transform-style: preserve-3d;
@@ -107,6 +110,39 @@ body {
             backface-visibility: hidden;
           }
         }
+      }
+    }
+
+    .info-box {
+      background-color: $color-black;
+      color: $color-white;
+      filter: drop-shadow(0 0 0.75rem $color-dark-black);
+      text-align: center;
+      font-size: 34px;
+      border-radius: 8px;
+      padding: 120px;
+      max-width: 500px;
+      height: auto;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-197px);
+      right: 0;
+      left: 0;
+      z-index: 10;
+      display: none;
+
+      > p {
+        margin-bottom: 12px;
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
       }
     }
 
