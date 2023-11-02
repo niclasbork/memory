@@ -48,13 +48,22 @@ body {
       margin-bottom: 5px;
 
       > input {
-        border: 1px solid #ccc;
+        border: 1px solid $color-black;
         border-radius: 30px;
         padding: 15px 50px;
         margin-bottom: 5px;
         font-family: $font-family;
         font-size: 20px;
         outline: none;
+
+        &::placeholder {
+          color: $color-black;
+          opacity: 1; /* Firefox */
+        }
+        
+        &::-ms-input-placeholder { /* Edge 12 -18 */
+          color: $color-black;
+        }
       }
     }
 
