@@ -27,8 +27,11 @@ npm run dev
 npm run build
 ```
 
-[Read the Docs to Learn More](https://vitejs.dev).
+[Read the Vite Docs to Learn More](https://vitejs.dev).
 
 ## License
 
 [MIT](LICENSE).
+
+## Netlify preview:
+https://sweet-kringle-b130ce.netlify.app/
