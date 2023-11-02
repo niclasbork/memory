@@ -65,8 +65,6 @@ body {
       .memory-card {
         position: relative;
         background-color: #1F2122;
-        width: calc(248px - 2px);
-        height: calc(248px - 2px);
         cursor: pointer;
         margin: 1px;
         transform-style: preserve-3d;
@@ -76,6 +74,13 @@ body {
         align-items: center;
         justify-content: center;
         border-radius: 8px;
+        width: calc(200px - 2px);
+        height: calc(200px - 2px);
+
+        @media (min-width: 1024px) {
+          width: calc(250px - 2px);
+          height: calc(250px - 2px);
+        }
 
         &.is-open {
           transform: rotateY(0);
@@ -89,7 +94,12 @@ body {
         }
 
         > img {
-          width: 55%;
+          -webkit-user-drag: none;
+          -khtml-user-drag: none;
+          -moz-user-drag: none;
+          -o-user-drag: none;
+          user-drag: none;
+          width: 50%;
           position: absolute;
           
 
@@ -102,7 +112,13 @@ body {
 
     h1 {
       font-size: 24px;
-      margin: 15px 0 0 5px;
+      margin: 20px auto;
+      text-align: center;
+
+      @media (min-width: 1024px) {
+        margin: 20px 0 20px 5px;
+        text-align: left;
+      }
     }
 
     button {

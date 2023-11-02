@@ -5,7 +5,7 @@ import data from '../data/memory.json';
 
 // console.log(data);
 
-const memoryWrapper = document.querySelector(".memory-game");
+const memoryGame = document.querySelector(".memory-game");
 const startGame = document.querySelector(".start-game");
 const newGame = document.querySelector(".new-game");
 const form = document.querySelector("form");
@@ -15,18 +15,18 @@ let memoryCard;
 const init = function() {
     for(let i = 0; i < data.length; i++) {
         // console.log(data[i]);
-        let cardWrapper = document.createElement("div");
+        let memoryCard = document.createElement("div");
         let cardBack = document.createElement("img");
         let cardFront = document.createElement("img");
         cardBack.src = data[i].back.src;
         cardFront.src = data[i].front.src;
         cardBack.className = data[i].back.class + " " + data[i].class;
         cardFront.className = data[i].front.class + " " + data[i].class;
-        cardWrapper.className = "memory-card"
-        cardWrapper.setAttribute("data-name", data[i].name);
-        cardWrapper.append(cardFront, cardBack);
-        let cardWrapperClone = cardWrapper.cloneNode(true);
-        memoryWrapper.append(cardWrapper, cardWrapperClone);
+        memoryCard.className = "memory-card"
+        memoryCard.setAttribute("data-name", data[i].name);
+        memoryCard.append(cardFront, cardBack);
+        let memoryCardClone = memoryCard.cloneNode(true);
+        memoryGame.append(memoryCard, memoryCardClone);
     }
 
     shuffleCards();
@@ -57,9 +57,9 @@ checkName();
 
 const shuffleCards = function() {
     console.log("Shuffle!");
-    for (let i = memoryWrapper.children.length - 1; i > 0; i--) {
+    for (let i = memoryGame.children.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        memoryWrapper.appendChild(memoryWrapper.children[j]);
+        memoryGame.appendChild(memoryGame.children[j]);
     }
 };
 
@@ -92,7 +92,7 @@ const checkForPairsIfTwoCardsAreOpen = function(callback) {
             console.log("It's a match!");
             openCards.length = 0; // Reset the open cards
         } else {
-            setTimeout(() => {
+            setTimeout(function() {
                 firstCard.classList.remove("is-open");
                 secondCard.classList.remove("is-open");
                 openCards.length = 0; // Reset the open cards
@@ -103,10 +103,17 @@ const checkForPairsIfTwoCardsAreOpen = function(callback) {
     }
 };
 
+const checkForWin = function() {
+    
+};
+
 const resetCards = function(element) {
     for(let i = 0; i < element.length; i++) {
         console.log("Reset!");
-        element[i].classList.remove("is-open");
+        setTimeout(function() {
+            element[i].classList.remove("is-open");
+        }, 500);
+        setTimeout(shuffleCards, 700);
     }
 };
 
@@ -119,6 +126,5 @@ startGame.addEventListener("click", function() {
 });
 
 newGame.addEventListener("click", function() {
-    shuffleCards();
     resetCards(memoryCard);
 });
