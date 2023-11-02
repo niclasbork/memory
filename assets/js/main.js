@@ -1,5 +1,5 @@
 import '../css/main.scss';
-import './helper';
+// import './helper';
 // import { gsap } from "gsap";
 import data from '../data/memory.json';
 
@@ -33,21 +33,27 @@ const init = function() {
     flipCard();
 };
 
-// const checkName = function() {
-//     startGame.disabled = true;
-//     input.addEventListener("input", function() {
-//         let nameValue = input.value;
-//         startGame.disabled = false;
-//         startGame.addEventListener("click", function() {
-//             console.log(nameValue);
-//             let player = document.createElement("h1");
-//             player.textContent = nameValue;
-//             document.querySelector("#app").prepend("Player: ", player);
-//         });
-//     });
-// };
+const checkName = function() {
+    startGame.disabled = true;
 
-// checkName();
+    input.addEventListener("change", function() {
+        let nameValue = input.value.trim();
+        startGame.disabled = false;
+        
+        startGame.addEventListener("click", function() {
+            let Name = document.createElement("h1");
+            Name.innerHTML = "<b>Name:</b> " + nameValue;
+
+            let app = document.querySelector("#app");
+            app.insertBefore(Name, startGame);
+
+            localStorage.setItem("Name", nameValue);
+            console.log("Name:", localStorage.getItem("Name"));
+        });
+    });
+};
+
+checkName();
 
 const shuffleCards = function() {
     console.log("Shuffle!");
@@ -96,15 +102,6 @@ const checkForPairsIfTwoCardsAreOpen = function(callback) {
         setTimeout(callback, 1000); // Call the callback to re-enable card interactions after 1 second
     }
 };
-
-// const checkForWin = function(el) {
-//     // console.log("check", el);
-//     for(let i = 0; el.length; i++) {
-//         if(el.classList.contains("is-open")) {
-//             console.log("HIT");
-//         }
-//     }
-// };
 
 const resetCards = function(element) {
     for(let i = 0; i < element.length; i++) {

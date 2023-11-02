@@ -1,19 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+$font-family: 'Playfair Display', serif;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: $font-family;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  // color-scheme: light dark;
+  color: #213547;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+b {
+  font-weight: 600;
 }
 
 body {
@@ -24,7 +30,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
   user-select: none;
-  font-family: 'Playpen Sans', cursive;
 
   #app {
     max-width: 1280px;
@@ -35,17 +40,18 @@ body {
 
     form {
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
 
       > input {
         border: 1px solid #ccc;
         border-radius: 30px;
         padding: 15px 50px;
+        margin-bottom: 5px;
+        font-family: $font-family;
         font-size: 20px;
-        font-family: 'Playpen Sans', cursive;
         outline: none;
-        text-align: center;
       }
     }
 
@@ -59,8 +65,8 @@ body {
       .memory-card {
         position: relative;
         background-color: #1F2122;
-        width: calc(245px - 2px);
-        height: calc(245px - 2px);
+        width: calc(248px - 2px);
+        height: calc(248px - 2px);
         cursor: pointer;
         margin: 1px;
         transform-style: preserve-3d;
@@ -69,9 +75,11 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 8px;
 
         &.is-open {
           transform: rotateY(0);
+          cursor: default;
 
           img {
             &.back-side {
@@ -81,7 +89,7 @@ body {
         }
 
         > img {
-          width: 60%;
+          width: 55%;
           position: absolute;
           
 
@@ -92,9 +100,9 @@ body {
       }
     }
 
-    .new-game {
-      display: none;
-      margin: 30px auto;
+    h1 {
+      font-size: 24px;
+      margin: 15px 0 0 5px;
     }
 
     button {
@@ -105,18 +113,16 @@ body {
       border-radius: 30px;
       color: #fff;
       padding: 15px 50px;
-      font-family: 'Playpen Sans', cursive;
+      font-family: $font-family;
 
       &:hover {
         background-color: rgba(31, 33, 34, .8);
       }
-    }
-  }
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+      &.new-game {
+        display: none;
+        margin: 0 auto;
+      }
+    }
   }
 }
