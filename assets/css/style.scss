@@ -86,8 +86,18 @@ body {
         align-items: center;
         justify-content: center;
         border-radius: 8px;
-        width: calc(200px - 2px);
-        height: calc(200px - 2px);
+        width: calc(127px - 2px);
+        height: calc(127px - 2px);
+
+        @media(min-width: 480px) {
+          width: calc(156px - 2px);
+          height: calc(156px - 2px);
+        }
+
+        @media(min-width: 768px) {
+          width: calc(200px - 2px);
+          height: calc(200px - 2px);
+        }
 
         @media (min-width: 1024px) {
           width: calc(250px - 2px);
